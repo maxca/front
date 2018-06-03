@@ -1,0 +1,29 @@
+{
+    "name": "samark/front",
+    "description": "For fronend BaseRepository call 3rd providers.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Samark Chaisanguan",
+            "email": "samarkchsngn@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support" : ">=5.3.0",
+        "samark/helper" : ">=1.0.0"
+    },
+    "autoload": {
+        "classmap": [
+          "src/"
+        ],
+        "psr-0": {
+          "Samark\\Front\\": "src/"
+        },
+         "files": [
+            "src/helper/common.php"
+        ]
+    }
+}
