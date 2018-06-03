@@ -51,8 +51,9 @@ class CopyEnvCommand extends Command
         $env .= "COOKIE_DOMAIN=\r\n";
         $env .= "EXPIRE_TIME=1440\r\n";
 
-        if (file_exists(base_path() . '.env')) {
-            file_put_contents(base_path() . '.env', $env . '\r\n', FILE_APPEND);
+        if (file_exists(base_path() . '/.env')) {
+            file_put_contents(base_path() . '/.env', $env, FILE_APPEND);
+            $this->line("copy .env config success !");
         } else {
             $this->line('not found .env file');
         }
